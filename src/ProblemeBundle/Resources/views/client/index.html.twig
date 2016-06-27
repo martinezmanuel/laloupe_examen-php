@@ -1,28 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Fruits list</h1>
+    <h1>Client list</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Fruit</th>
+                <th>Client</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for fruit in fruits %}
+        {% for client in clients %}
             <tr>
-                <td><a href="{{ path('fruits_show', { 'id': fruit.id }) }}">{{ fruit.id }}</a></td>
-                <td>{{ fruit.fruit }}</td>
+                <td><a href="{{ path('client_show', { 'id': client.id }) }}">{{ client.id }}</a></td>
+                <td>{{ client.client }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('fruits_show', { 'id': fruit.id }) }}">show</a>
+                            <a href="{{ path('client_show', { 'id': client.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('fruits_edit', { 'id': fruit.id }) }}">edit</a>
+                            <a href="{{ path('client_edit', { 'id': client.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -33,7 +33,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('fruits_new') }}">Create a new entry</a>
+            <a href="{{ path('client_new') }}">Create a new entry</a>
         </li>
     </ul>
 {% endblock %}
