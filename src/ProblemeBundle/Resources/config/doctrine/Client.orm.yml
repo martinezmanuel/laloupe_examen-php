@@ -1,0 +1,21 @@
+ProblemeBundle\Entity\Client:
+    type: entity
+    table: null
+    repositoryClass: ProblemeBundle\Repository\ClientRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        client:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
+
+
+    manytoMany:
+       fruits:
+          targetentity: Problemebundle\Entity\Client
+          mappedBy: clients

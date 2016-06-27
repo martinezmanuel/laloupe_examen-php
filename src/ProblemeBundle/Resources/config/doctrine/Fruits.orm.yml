@@ -1,0 +1,22 @@
+ProblemeBundle\Entity\Fruits:
+    type: entity
+    table: null
+    repositoryClass: ProblemeBundle\Repository\FruitsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fruit:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
+
+    manytoMany:
+        clients:
+            targetEntity: ProblemBundle\Entity\Fruits
+            inversedBy: clients
+            joinTable:
+                name: consommation_fruit

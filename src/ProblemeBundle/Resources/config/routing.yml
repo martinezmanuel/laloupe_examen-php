@@ -1,3 +1,11 @@
+probleme_fruits:
+    resource: "@ProblemeBundle/Resources/config/routing/fruits.yml"
+    prefix:   /fruits
+
+probleme_client:
+    resource: "@ProblemeBundle/Resources/config/routing/client.yml"
+    prefix:   /client
+
 probleme_homepage:
     path:     /
     defaults: { _controller: ProblemeBundle:Default:index }

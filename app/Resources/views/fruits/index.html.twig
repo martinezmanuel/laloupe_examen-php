@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Fruits list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fruit</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fruit in fruits %}
+            <tr>
+                <td><a href="{{ path('fruits_show', { 'id': fruit.id }) }}">{{ fruit.id }}</a></td>
+                <td>{{ fruit.fruit }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('fruits_show', { 'id': fruit.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('fruits_edit', { 'id': fruit.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fruits_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

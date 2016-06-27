@@ -1,0 +1,24 @@
+fruits_index:
+    path:     /
+    defaults: { _controller: "ProblemeBundle:Fruits:index" }
+    methods:  GET
+
+fruits_show:
+    path:     /{id}/show
+    defaults: { _controller: "ProblemeBundle:Fruits:show" }
+    methods:  GET
+
+fruits_new:
+    path:     /new
+    defaults: { _controller: "ProblemeBundle:Fruits:new" }
+    methods:  [GET, POST]
+
+fruits_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ProblemeBundle:Fruits:edit" }
+    methods:  [GET, POST]
+
+fruits_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ProblemeBundle:Fruits:delete" }
+    methods:  DELETE
