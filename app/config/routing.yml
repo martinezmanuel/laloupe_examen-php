@@ -1,6 +1,6 @@
 probleme:
     resource: "@ProblemeBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /index
 
 app:
     resource: "@AppBundle/Controller/"
