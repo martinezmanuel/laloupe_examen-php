@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends '@Probleme/base.html.twig' %}
 
 {% block body %}
     <h1>Client</h1>
@@ -12,6 +12,22 @@
             <tr>
                 <th>Client</th>
                 <td>{{ client.client }}</td>
+            </tr>
+            <tr>
+                <th>Consommation de pommes</th>
+                <td>{{ client.consomationDePomme }}</td>
+            </tr>
+            <tr>
+                <th>Consommation de bananes</th>
+                <td>{{ client.consomationDeBanane }}</td>
+            </tr>
+            <tr>
+                <th>Consommation d'ananas</th>
+                <td>{{ client.consomationAnanas }}</td>
+            </tr>
+            <tr>
+                <th>Cout total :</th>
+                <td>{{ facture }}</td>
             </tr>
         </tbody>
     </table>

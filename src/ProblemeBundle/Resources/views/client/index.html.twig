@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends '@Probleme/base.html.twig' %}
 
 {% block body %}
     <h1>Client list</h1>
@@ -16,6 +16,9 @@
             <tr>
                 <td><a href="{{ path('client_show', { 'id': client.id }) }}">{{ client.id }}</a></td>
                 <td>{{ client.client }}</td>
+
+             </tr>
+
                 <td>
                     <ul>
                         <li>
@@ -34,6 +37,7 @@
     <ul>
         <li>
             <a href="{{ path('client_new') }}">Create a new entry</a>
+            <a href="{{ path('homepage') }}">Menu</a>
         </li>
     </ul>
 {% endblock %}

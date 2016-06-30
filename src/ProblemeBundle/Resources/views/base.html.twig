@@ -3,13 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/framework/css/body.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('bundles/framework/css/exception.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('bundles/framework/css/structure.css') }}"/>
+
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}
-          <a href="client/index.html.twig">clients </a>
-          <a href="fruits/index.html.twig">Fruits</a>
+          <a href="{{ path('client_index') }}"id ="tamere">Clients </a>
+          <a href="{{ path('fruits_index') }}"id ="tamere">Fruits</a>
+            <a href="{{ path('homepage') }}"id ="tamere">Menu</a>
+
+
 
         {% endblock %}
         {% block javascripts %}{% endblock %}

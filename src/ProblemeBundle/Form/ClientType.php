@@ -16,6 +16,9 @@ class ClientType extends AbstractType
     {
         $builder
             ->add('client')
+            ->add('consomation_ananas')
+            ->add('consomation_de_banane')
+            ->add('consomation_de_pomme')
         ;
     }
     

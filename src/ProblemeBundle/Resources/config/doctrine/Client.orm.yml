@@ -12,6 +12,12 @@ ProblemeBundle\Entity\Client:
         client:
             type: string
             length: 255
+        consomation_de_banane:
+            type: integer
+        consomation_de_pomme:
+            type: integer
+        consomation_ananas:
+            type: integer
     lifecycleCallbacks: {  }
 
 

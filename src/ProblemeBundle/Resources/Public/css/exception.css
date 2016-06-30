@@ -110,3 +110,12 @@
     font-size: 12px;
     font-family: monospace;
 }
+a:link
+{
+    text-decoration:none;
+}
+#tamere
+{
+    font-size:25px;
+
+}

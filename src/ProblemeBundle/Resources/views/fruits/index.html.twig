@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends '@Probleme/base.html.twig' %}
 
 {% block body %}
     <h1>Fruits list</h1>
@@ -34,6 +34,8 @@
     <ul>
         <li>
             <a href="{{ path('fruits_new') }}">Create a new entry</a>
+            <a href="{{ path('homepage') }}">Menu</a>
+
         </li>
     </ul>
 {% endblock %}

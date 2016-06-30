@@ -1,5 +1,5 @@
 fruits_index:
-    path:     /
+    path:     /fruit
     defaults: { _controller: "ProblemeBundle:Fruits:index" }
     methods:  GET
 

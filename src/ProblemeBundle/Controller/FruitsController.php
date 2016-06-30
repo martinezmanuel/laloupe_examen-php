@@ -24,7 +24,7 @@ class FruitsController extends Controller
 
         $fruits = $em->getRepository('ProblemeBundle:Fruits')->findAll();
 
-        return $this->render('fruits/index.html.twig', array(
+        return $this->render('@Probleme/fruits/index.html.twig', array(
             'fruits' => $fruits,
         ));
     }
@@ -47,7 +47,8 @@ class FruitsController extends Controller
             return $this->redirectToRoute('fruits_show', array('id' => $fruit->getId()));
         }
 
-        return $this->render('fruits/new.html.twig', array(
+        return $this->render('@Probleme/fruits/new.html.twig'
+            , array(
             'fruit' => $fruit,
             'form' => $form->createView(),
         ));
@@ -61,7 +62,7 @@ class FruitsController extends Controller
     {
         $deleteForm = $this->createDeleteForm($fruit);
 
-        return $this->render('fruits/show.html.twig', array(
+        return $this->render('@Probleme/fruits/show.html.twig', array(
             'fruit' => $fruit,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +86,7 @@ class FruitsController extends Controller
             return $this->redirectToRoute('fruits_edit', array('id' => $fruit->getId()));
         }
 
-        return $this->render('fruits/edit.html.twig', array(
+        return $this->render('@Probleme/fruits/edit.html.twig', array(
             'fruit' => $fruit,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
